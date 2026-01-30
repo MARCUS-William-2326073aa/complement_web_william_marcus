@@ -33,6 +33,7 @@ function changeblock(){
     }
     if(A_tableau[I_temps]>20 && A_tableau[I_temps]<30){
         O_block.className = "orange";
+
         O_cagoule.textContent = "";
     }
     if(A_tableau[I_temps]>30){
