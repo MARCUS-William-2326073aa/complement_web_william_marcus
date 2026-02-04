@@ -6,13 +6,46 @@
     <link rel='stylesheet' href="index.css">
 </head>
 <body>
-<section >
-    <p id="cagoule"></p>
-    <p id="block" aria-live="polite" aria-atomic="true" aria-relevant="all"> oui
-    </p>
-    <p id="history" class="history" role="alert"></p>
-</section>
-<script src="Exo1.js"></script>
+<div class="tabs">
+    <h3 id="tablist-1">ta grand mère elle a froid ou bien?</h3>
+    <div role="tablist" aria-labelledby="tablist-1" class="manual">
+        <button id="tab-1" type="button" role="tab" aria-selected="true" aria-controls="tabpanel-1">
+            <span class="focus">Capteur</span>
+        </button>
+        <button id="tab-2" type="button" role="tab" aria-selected="false" aria-controls="tabpanel-2" tabindex="-1">
+            <span class="focus">History</span>
+        </button>
+    </div>
+
+    <div id="tabpanel-1" role="tabpanel" aria-labelledby="tab-1">
+        <table>
+
+            <thead>
+            <tr><th>N°</th><th>Température</th></tr>
+            </thead>
+
+        </table>
+        <div id="cagoule"></div>
+        <div id="block"></div>
+    </div>
+    <div id="tabpanel-2" role="tabpanel" aria-labelledby="tab-2" class="is-hidden" >
+        <table>
+            <thead>
+            <tr>
+                <th>Mesure</th>
+                <th>Valeur</th>
+            </tr>
+            </thead>
+            <tbody id="history-table-body"></tbody>
+        </table>
+    </div>
+</div>
+<script src="Js/App.js"></script>
+<script src="Js/EventManager.js"></script>
+<script src="Js/Listeners.js"></script>
+<script src="Js/WeatherSensor.js"></script>
 
 </body>
 </html>
+
+
